@@ -1,102 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MrBombillas3000 | Aprende Minecraft</title>
-  <meta name="description" content="Guías sencillas para aprender a jugar Minecraft desde cero.">
-  <style>
-    :root { --green:#4caf50; --dark:#172019; --brown:#795548; --cream:#f7f3e8; --card:#fff; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Arial, sans-serif; background:var(--cream); color:var(--dark); }
-    header { background:#1f2b22; color:white; position:sticky; top:0; z-index:10; }
-    nav { max-width:1100px; margin:auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .logo { font-size:1.35rem; font-weight:800; }
-    .logo span { color:#ffd54f; }
-    nav a { color:white; text-decoration:none; margin-left:18px; font-weight:600; }
-    .hero { background:linear-gradient(135deg,#4caf50,#2e7d32); color:white; padding:75px 20px; }
-    .hero-inner { max-width:1100px; margin:auto; display:grid; grid-template-columns:1.5fr 1fr; gap:40px; align-items:center; }
-    h1 { font-size:clamp(2.3rem,6vw,4.5rem); margin:0 0 15px; line-height:1; }
-    .hero p { font-size:1.2rem; max-width:620px; line-height:1.6; }
-    .button { display:inline-block; background:#ffd54f; color:#172019; padding:14px 22px; border-radius:10px; text-decoration:none; font-weight:800; margin-top:12px; }
-    .lamp { font-size:8rem; text-align:center; filter:drop-shadow(0 12px 8px #1b5e2040); }
-    main { max-width:1100px; margin:auto; padding:55px 20px; }
-    section { margin-bottom:65px; }
-    h2 { font-size:2rem; margin-bottom:10px; }
-    .intro { color:#526056; margin-bottom:25px; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .card { background:var(--card); border-radius:15px; padding:23px; box-shadow:0 5px 18px #00000012; border:1px solid #e5e1d7; }
-    .icon { font-size:2rem; }
-    .card h3 { margin:10px 0 8px; }
-    .card p { line-height:1.5; color:#5c665e; }
-    .lesson { border-left:6px solid var(--green); }
-    .popular { border-top:5px solid var(--brown); }
-    .tip { background:#fff8d8; border:2px dashed #e0b93f; padding:25px; border-radius:15px; }
-    footer { background:#1f2b22; color:#dce5dd; text-align:center; padding:30px 20px; }
-    footer a { color:#ffd54f; }
-    @media(max-width:800px) { .hero-inner{grid-template-columns:1fr}.lamp{font-size:5rem}.grid{grid-template-columns:1fr} nav{flex-direction:column;align-items:flex-start} nav a{margin:0 12px 0 0} }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MrBombillas3000: guías originales de Minecraft para principiantes.">
+<title>MrBombillas3000 — Guías de Minecraft</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1d2630;--text:#f0f6fc;--muted:#a8b3c2;--green:#39d353;--gold:#f2cc60;--line:#30363d}
+*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit}
+header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.97);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;text-decoration:none;font-size:1.15rem}.logo span{color:var(--gold)}
+nav{display:flex;gap:15px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted);font-weight:700}nav a:hover{color:var(--green)}
+.hero{background:linear-gradient(135deg,#17351f,#0e2116 55%,#101820);border-bottom:1px solid var(--line)}.hero-inner{max-width:1100px;margin:auto;padding:78px 20px 70px}
+.badge{display:inline-block;border:1px solid #2ea043;background:#132a1a;color:#7ee787;padding:6px 10px;border-radius:999px;font-size:.85rem;font-weight:800}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1;margin:18px 0;letter-spacing:-2px}.hero p{max-width:700px;color:#c9d1d9;font-size:1.15rem}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;text-decoration:none;padding:12px 17px;border-radius:10px;font-weight:900;border:1px solid var(--line)}.primary{background:var(--green);color:#07130a;border-color:var(--green)}.secondary{background:var(--panel)}
+main{max-width:1100px;margin:auto;padding:55px 20px}section{margin-bottom:70px}.section-title{font-size:2rem;margin:0 0 8px}.lead{color:var(--muted);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#4b5563}.icon{font-size:2rem}.card h3{margin:10px 0 6px}.card p{color:var(--muted);margin-top:0}.card a{display:inline-block;margin-top:8px;color:#7ee787;text-decoration:none;font-weight:800}
+.guide{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;margin:20px 0;scroll-margin-top:90px}.guide h3{font-size:1.55rem;margin:0 0 8px}.guide ul{padding-left:22px}
+.tip{border-left:4px solid var(--gold);background:#201d12;padding:14px 16px;border-radius:8px;margin-top:18px}.danger{border-left-color:#ff7b72;background:#241416}
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.check{background:var(--panel2);border:1px solid var(--line);padding:12px;border-radius:10px}
+footer{border-top:1px solid var(--line);padding:30px 20px;color:var(--muted);text-align:center}.small{font-size:.9rem}
+@media(max-width:650px){.nav{align-items:flex-start;flex-direction:column}h1{letter-spacing:-1px}}
+</style>
 </head>
 <body>
-<header>
-  <nav>
-    <div class="logo">💡 Mr<span>Bombillas3000</span></div>
-    <div>
-      <a href="#inicio">Inicio</a>
-      <a href="#aprender">Aprende</a>
-      <a href="#guias">Guías</a>
-      <a href="#consejo">Consejos</a>
-    </div>
-  </nav>
-</header>
+<header><div class="nav">
+<a class="logo" href="#inicio">💡 Mr<span>Bombillas3000</span></a>
+<nav><a href="#guias">Guías</a><a href="#supervivencia">Supervivencia</a><a href="#mineria">Minería</a><a href="#exploracion">Exploración</a><a href="#construccion">Construcción</a><a href="#consejos">Consejos</a></nav>
+</div></header>
 
-<section class="hero" id="inicio">
-  <div class="hero-inner">
-    <div>
-      <h1>Aprende a jugar desde cero.</h1>
-      <p>Guías sencillas, paso a paso y pensadas para quienes están empezando. Entra, aprende y conviértete en un jugador cada vez mejor.</p>
-      <a class="button" href="#aprender">🎮 EMPEZAR A APRENDER</a>
-    </div>
-    <div class="lamp" aria-label="Bombilla">💡</div>
-  </div>
-</section>
+<section class="hero" id="inicio"><div class="hero-inner">
+<span class="badge">🎮 GUÍAS PARA PRINCIPIANTES</span>
+<h1>Aprende Minecraft desde cero.</h1>
+<p>Una guía clara y sencilla para empezar: desde conseguir madera y sobrevivir a la primera noche hasta explorar, minar, construir y combatir.</p>
+<div class="buttons"><a class="btn primary" href="#guias">🚀 Empezar a aprender</a><a class="btn secondary" href="#primera-noche">🌙 Primera noche</a></div>
+</div></section>
 
 <main>
-  <section id="aprender">
-    <h2>📚 Aprende desde 0</h2>
-    <p class="intro">Sigue el camino recomendado y aprende una cosa cada vez.</p>
-    <div class="grid">
-      <article class="card lesson"><div class="icon">1️⃣</div><h3>Tu primer día</h3><p>Qué hacer al aparecer, conseguir madera y preparar tus primeras herramientas.</p></article>
-      <article class="card lesson"><div class="icon">2️⃣</div><h3>Primera noche</h3><p>Consigue comida, prepara un refugio y descubre cómo sobrevivir.</p></article>
-      <article class="card lesson"><div class="icon">3️⃣</div><h3>Herramientas</h3><p>Aprende qué herramientas fabricar y cuándo utilizar cada una.</p></article>
-      <article class="card lesson"><div class="icon">4️⃣</div><h3>Minería</h3><p>Aprende a explorar bajo tierra y a gestionar tus recursos.</p></article>
-      <article class="card lesson"><div class="icon">5️⃣</div><h3>Nether</h3><p>Prepárate para explorar una nueva dimensión con más experiencia.</p></article>
-      <article class="card lesson"><div class="icon">6️⃣</div><h3>El End</h3><p>Cuando estés preparado, descubre cómo avanzar hacia uno de los grandes objetivos del juego.</p></article>
-    </div>
-  </section>
+<section id="guias"><h2 class="section-title">📚 Por dónde empezar</h2><p class="lead">Si acabas de crear tu primer mundo, sigue este orden.</p>
+<div class="grid">
+<article class="card"><div class="icon">🌳</div><h3>1. Primer día</h3><p>Madera, herramientas, comida y refugio.</p><a href="#primer-dia">Leer guía →</a></article>
+<article class="card"><div class="icon">🌙</div><h3>2. Primera noche</h3><p>Refugio, luz y cama para pasar la noche.</p><a href="#primera-noche">Leer guía →</a></article>
+<article class="card"><div class="icon">⛏️</div><h3>3. Minería</h3><p>Prepárate para minar y organiza tus recursos.</p><a href="#mineria">Leer guía →</a></article>
+<article class="card"><div class="icon">🧭</div><h3>4. Exploración</h3><p>Viaja preparado y aprende a volver a casa.</p><a href="#exploracion">Leer guía →</a></article>
+<article class="card"><div class="icon">🏠</div><h3>5. Construcción</h3><p>Convierte un refugio en una base que puedas ampliar.</p><a href="#construccion">Leer guía →</a></article>
+<article class="card"><div class="icon">⚔️</div><h3>6. Combate</h3><p>Consejos básicos para enfrentarte a criaturas.</p><a href="#combate">Leer guía →</a></article>
+</div></section>
 
-  <section id="guias">
-    <h2>🔥 Guías populares</h2>
-    <p class="intro">Ideas para las primeras guías de la web.</p>
-    <div class="grid">
-      <article class="card popular"><h3>Cómo empezar una partida</h3><p>Una guía rápida para no quedarse perdido durante los primeros minutos.</p></article>
-      <article class="card popular"><h3>Cómo conseguir hierro</h3><p>Aprende para qué sirve y cómo incorporarlo a tu progreso.</p></article>
-      <article class="card popular"><h3>Cómo encontrar diamantes</h3><p>Consejos generales para mejorar tus expediciones de minería.</p></article>
-      <article class="card popular"><h3>Cómo construir tu primera casa</h3><p>Una construcción sencilla para tener un lugar seguro.</p></article>
-      <article class="card popular"><h3>Cómo preparar una granja</h3><p>Aprende los conceptos básicos para conseguir recursos de forma organizada.</p></article>
-      <article class="card popular"><h3>Qué llevar al Nether</h3><p>Una lista de preparación para reducir sorpresas durante la aventura.</p></article>
-    </div>
-  </section>
+<section id="supervivencia"><h2 class="section-title">🌙 Supervivencia</h2><p class="lead">Las primeras horas son las más importantes.</p>
+<article class="guide" id="primer-dia"><h3>🌳 Guía: tu primer día</h3>
+<p>Tu prioridad es conseguir recursos básicos antes de que anochezca.</p>
+<ol><li><strong>Madera:</strong> consigue troncos y conviértelos en tablones.</li><li><strong>Mesa de trabajo:</strong> úsala para fabricar objetos más avanzados.</li><li><strong>Pico:</strong> consigue piedra y mejora tus herramientas.</li><li><strong>Comida:</strong> consigue una fuente de alimento.</li><li><strong>Refugio:</strong> busca un lugar seguro y prepara iluminación.</li></ol>
+<div class="tip">💡 Consejo Bombillas: no necesitas construir una mansión el primer día. Un refugio sencillo y seguro ya es una victoria.</div></article>
 
-  <section id="consejo">
-    <h2>💡 Consejo de MrBombillas3000</h2>
-    <div class="tip"><strong>“No necesitas saberlo todo para empezar.</strong><br>Ve paso a paso, prueba cosas y aprende de tus errores. ¡La aventura empieza aquí!”</div>
-  </section>
+<article class="guide" id="primera-noche"><h3>🌙 Guía: sobrevivir a la primera noche</h3>
+<ul><li>Haz un refugio pequeño y cerrado.</li><li>Coloca fuentes de luz dentro y alrededor.</li><li>Si tienes los materiales necesarios, fabrica una cama.</li><li>Guarda los recursos importantes en un cofre.</li><li>Evita explorar sin comida ni herramientas.</li></ul>
+<div class="tip danger">⚠️ Si llevas objetos importantes, no arriesgues todo por un recurso que puede esperar.</div></article>
+</section>
+
+<section id="mineria"><h2 class="section-title">⛏️ Minería</h2><p class="lead">Minar bien consiste tanto en encontrar recursos como en volver a casa.</p>
+<article class="guide"><h3>⛏️ Preparar una expedición minera</h3>
+<div class="checklist"><div class="check">☑️ Picos de repuesto</div><div class="check">☑️ Comida suficiente</div><div class="check">☑️ Iluminación</div><div class="check">☑️ Cofre en la base</div><div class="check">☑️ Espacio en el inventario</div><div class="check">☑️ Bloques para construir</div></div>
+<div class="tip">💡 Consejo Bombillas: marca tus túneles para saber por dónde volver. Perderse con el inventario lleno es una mala idea.</div></article></section>
+
+<section id="exploracion"><h2 class="section-title">🧭 Exploración</h2><p class="lead">Salir preparado hace una diferencia enorme.</p>
+<article class="guide"><h3>🧭 Antes de alejarte de tu base</h3><ul><li>Lleva comida, herramientas y algunos bloques.</li><li>Guarda en casa los objetos que no quieras arriesgar.</li><li>Presta atención a tu camino de vuelta.</li><li>Para viajes largos, usa herramientas de orientación cuando estén disponibles.</li></ul></article></section>
+
+<section id="construccion"><h2 class="section-title">🏠 Construcción</h2><p class="lead">No necesitas ser arquitecto para hacer una base chula.</p>
+<article class="guide"><h3>🏠 De refugio a base</h3><ol><li>Empieza con una forma sencilla.</li><li>Separa almacenamiento, fabricación y descanso.</li><li>Añade iluminación.</li><li>Elige pocos materiales que combinen.</li><li>Amplía la base cuando tengas más recursos.</li></ol></article></section>
+
+<section id="combate"><h2 class="section-title">⚔️ Combate</h2><p class="lead">No entres en una pelea sin preparación.</p>
+<article class="guide"><h3>⚔️ Reglas básicas</h3><ul><li>Lleva comida y una herramienta adecuada.</li><li>Evita varios enemigos a la vez si estás empezando.</li><li>Usa el terreno a tu favor.</li><li>Si la pelea se complica, retirarte también es una estrategia.</li></ul><div class="tip">💡 Consejo Bombillas: sobrevivir es más importante que conseguir un objeto inmediatamente.</div></article></section>
+
+<section id="consejos"><h2 class="section-title">💡 Consejos Bombillas</h2>
+<div class="grid"><article class="card"><h3>🎒 Organiza el inventario</h3><p>Guarda los recursos importantes y evita llevar todo encima.</p></article><article class="card"><h3>🗺️ Piensa antes de viajar</h3><p>Una pequeña preparación puede ahorrarte un viaje enorme.</p></article><article class="card"><h3>🏗️ Construye por fases</h3><p>Una base pequeña que funciona es mejor que un proyecto gigante sin terminar.</p></article><article class="card"><h3>🧪 Aprende experimentando</h3><p>Prueba cosas y descubre qué estilo de juego te gusta.</p></article></div></section>
 </main>
 
-<footer>
-  <p><strong>💡 MrBombillas3000</strong> — Proyecto independiente de guías para jugadores.</p>
-  <p>Esta primera versión es un prototipo. Antes de publicar, añadiremos contenido original, páginas de guías y las páginas legales necesarias.</p>
-</footer>
-</body>
-</html>
+<footer><p><strong>💡 MrBombillas3000</strong> — Guías originales para aprender a jugar Minecraft.</p><p class="small">MrBombillas3000 es un proyecto independiente y no está afiliado con Mojang Studios ni Microsoft. Minecraft es una marca de Mojang Studios.</p></footer>
+</body></html>
