@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MrBombillas3000 | Aprende Minecraft</title>
+  <meta name="description" content="Guías sencillas para aprender a jugar Minecraft desde cero.">
+  <style>
+    :root { --green:#4caf50; --dark:#172019; --brown:#795548; --cream:#f7f3e8; --card:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, sans-serif; background:var(--cream); color:var(--dark); }
+    header { background:#1f2b22; color:white; position:sticky; top:0; z-index:10; }
+    nav { max-width:1100px; margin:auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .logo { font-size:1.35rem; font-weight:800; }
+    .logo span { color:#ffd54f; }
+    nav a { color:white; text-decoration:none; margin-left:18px; font-weight:600; }
+    .hero { background:linear-gradient(135deg,#4caf50,#2e7d32); color:white; padding:75px 20px; }
+    .hero-inner { max-width:1100px; margin:auto; display:grid; grid-template-columns:1.5fr 1fr; gap:40px; align-items:center; }
+    h1 { font-size:clamp(2.3rem,6vw,4.5rem); margin:0 0 15px; line-height:1; }
+    .hero p { font-size:1.2rem; max-width:620px; line-height:1.6; }
+    .button { display:inline-block; background:#ffd54f; color:#172019; padding:14px 22px; border-radius:10px; text-decoration:none; font-weight:800; margin-top:12px; }
+    .lamp { font-size:8rem; text-align:center; filter:drop-shadow(0 12px 8px #1b5e2040); }
+    main { max-width:1100px; margin:auto; padding:55px 20px; }
+    section { margin-bottom:65px; }
+    h2 { font-size:2rem; margin-bottom:10px; }
+    .intro { color:#526056; margin-bottom:25px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:var(--card); border-radius:15px; padding:23px; box-shadow:0 5px 18px #00000012; border:1px solid #e5e1d7; }
+    .icon { font-size:2rem; }
+    .card h3 { margin:10px 0 8px; }
+    .card p { line-height:1.5; color:#5c665e; }
+    .lesson { border-left:6px solid var(--green); }
+    .popular { border-top:5px solid var(--brown); }
+    .tip { background:#fff8d8; border:2px dashed #e0b93f; padding:25px; border-radius:15px; }
+    footer { background:#1f2b22; color:#dce5dd; text-align:center; padding:30px 20px; }
+    footer a { color:#ffd54f; }
+    @media(max-width:800px) { .hero-inner{grid-template-columns:1fr}.lamp{font-size:5rem}.grid{grid-template-columns:1fr} nav{flex-direction:column;align-items:flex-start} nav a{margin:0 12px 0 0} }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">💡 Mr<span>Bombillas3000</span></div>
+    <div>
+      <a href="#inicio">Inicio</a>
+      <a href="#aprender">Aprende</a>
+      <a href="#guias">Guías</a>
+      <a href="#consejo">Consejos</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div>
+      <h1>Aprende a jugar desde cero.</h1>
+      <p>Guías sencillas, paso a paso y pensadas para quienes están empezando. Entra, aprende y conviértete en un jugador cada vez mejor.</p>
+      <a class="button" href="#aprender">🎮 EMPEZAR A APRENDER</a>
+    </div>
+    <div class="lamp" aria-label="Bombilla">💡</div>
+  </div>
+</section>
+
+<main>
+  <section id="aprender">
+    <h2>📚 Aprende desde 0</h2>
+    <p class="intro">Sigue el camino recomendado y aprende una cosa cada vez.</p>
+    <div class="grid">
+      <article class="card lesson"><div class="icon">1️⃣</div><h3>Tu primer día</h3><p>Qué hacer al aparecer, conseguir madera y preparar tus primeras herramientas.</p></article>
+      <article class="card lesson"><div class="icon">2️⃣</div><h3>Primera noche</h3><p>Consigue comida, prepara un refugio y descubre cómo sobrevivir.</p></article>
+      <article class="card lesson"><div class="icon">3️⃣</div><h3>Herramientas</h3><p>Aprende qué herramientas fabricar y cuándo utilizar cada una.</p></article>
+      <article class="card lesson"><div class="icon">4️⃣</div><h3>Minería</h3><p>Aprende a explorar bajo tierra y a gestionar tus recursos.</p></article>
+      <article class="card lesson"><div class="icon">5️⃣</div><h3>Nether</h3><p>Prepárate para explorar una nueva dimensión con más experiencia.</p></article>
+      <article class="card lesson"><div class="icon">6️⃣</div><h3>El End</h3><p>Cuando estés preparado, descubre cómo avanzar hacia uno de los grandes objetivos del juego.</p></article>
+    </div>
+  </section>
+
+  <section id="guias">
+    <h2>🔥 Guías populares</h2>
+    <p class="intro">Ideas para las primeras guías de la web.</p>
+    <div class="grid">
+      <article class="card popular"><h3>Cómo empezar una partida</h3><p>Una guía rápida para no quedarse perdido durante los primeros minutos.</p></article>
+      <article class="card popular"><h3>Cómo conseguir hierro</h3><p>Aprende para qué sirve y cómo incorporarlo a tu progreso.</p></article>
+      <article class="card popular"><h3>Cómo encontrar diamantes</h3><p>Consejos generales para mejorar tus expediciones de minería.</p></article>
+      <article class="card popular"><h3>Cómo construir tu primera casa</h3><p>Una construcción sencilla para tener un lugar seguro.</p></article>
+      <article class="card popular"><h3>Cómo preparar una granja</h3><p>Aprende los conceptos básicos para conseguir recursos de forma organizada.</p></article>
+      <article class="card popular"><h3>Qué llevar al Nether</h3><p>Una lista de preparación para reducir sorpresas durante la aventura.</p></article>
+    </div>
+  </section>
+
+  <section id="consejo">
+    <h2>💡 Consejo de MrBombillas3000</h2>
+    <div class="tip"><strong>“No necesitas saberlo todo para empezar.</strong><br>Ve paso a paso, prueba cosas y aprende de tus errores. ¡La aventura empieza aquí!”</div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>💡 MrBombillas3000</strong> — Proyecto independiente de guías para jugadores.</p>
+  <p>Esta primera versión es un prototipo. Antes de publicar, añadiremos contenido original, páginas de guías y las páginas legales necesarias.</p>
+</footer>
+</body>
+</html>
